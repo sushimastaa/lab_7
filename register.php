@@ -39,3 +39,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="register.php" method="post">
+    <label>Matric:</label>
+    <input type="text" name="matric" required><br><br>
+
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" required><br><br>
+
+    <label>Role:</label>
+    <select name="role" required>
+      <option value="">Please select</option>
+      <option value="student">Student</option>
+      <option value="lecturer">Lecturer</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
+
